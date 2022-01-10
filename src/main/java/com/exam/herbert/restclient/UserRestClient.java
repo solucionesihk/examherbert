@@ -23,14 +23,14 @@ public class UserRestClient {
         @Autowired
         ResponseRestClientUtil responseRestClientUtil;
     
-	@Autowired
-	ConfigSettingCollection configSettingCollect;
+        @Autowired
+        ConfigSettingCollection configSettingCollect;
         
         public ObjectNode getData(){
             return urlResponse( configSettingCollect.getUrlUsers() );
         }
         
     	private ObjectNode urlResponse( String url ) {
-		return responseRestClientUtil.responseGet( new HttpGet( url ) );
-	}
+		    return responseRestClientUtil.responseGet( new HttpGet( url ) );
+	    }
 }
